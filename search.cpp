@@ -5,13 +5,8 @@
 
 using namespace std;
 
-/**
-\fn linearSearch
-\brief Search data for the first occurrence of key
-\param [in] key The value being searched for
-\param [in] data The data set that will be searched
-\returns location of key if found or -1 if not found
-*/
+
+
 int linearSearch(auto data, auto key);//prototype
 
 
@@ -67,3 +62,16 @@ int main()
 
     return 0;
 }
+
+
+int linearSearch(auto data, auto key)
+ {
+   for (int i=0; i<data.size();i++)
+     {
+		 if (data[i]==key)
+		   {
+			   return i;
+		   }
+	 }
+   return -1;
+ }
