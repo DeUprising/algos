@@ -65,7 +65,7 @@ int linearSearch(auto data, auto key)
  
 void selectionsort(auto& data)
 {
-	int i,j,minIndex;
+	int i,j,minIndex,passes;
 	
 	for(i=0;i<data.size()-1;i++)
 	 {
@@ -81,7 +81,12 @@ void selectionsort(auto& data)
 		  {
 			  swap(data[i],data[minIndex]);
 		  }
+		 passes++;
      }
+    if (passes>=20000)
+     {
+		 cout<<"Number of passes completed: "<<passes;
+	 }
 }
 		 
 		 
